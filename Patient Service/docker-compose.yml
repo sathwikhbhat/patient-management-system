@@ -1,0 +1,38 @@
+services:
+  patient-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: patient-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://patient-service-db:5432/db
+      SPRING_DATASOURCE_USERNAME: admin_user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_SQL_INIT_MODE: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      - patient-service-db
+    networks:
+      - internal
+
+  patient-service-db:
+    container_name: patient-service-db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: admin_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+    ports:
+      - "5000:5432"
+    volumes:
+      - "postgres_data:/var/lib/postgresql"
+    networks:
+      - internal
+
+networks:
+  internal:
+
+volumes:
+  postgres_data:
