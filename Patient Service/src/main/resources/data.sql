@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS patient
     address         VARCHAR(255)        NOT NULL,
     date_of_birth   DATE                NOT NULL,
     registered_date DATE                NOT NULL
-    );
+);
 
 -- Sample Patient Data
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
@@ -17,7 +17,7 @@ SELECT '123e4567-e89b-12d3-a456-426614170000',
        '12 MG Road, Indiranagar, Bengaluru',
        '1998-04-12',
        '2024-02-10'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170000');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170000');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '123e4567-e89b-12d3-a456-426614170001',
@@ -26,7 +26,7 @@ SELECT '123e4567-e89b-12d3-a456-426614170001',
        '44 Marine Drive, Kochi, Kerala',
        '1995-11-03',
        '2023-12-15'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170001');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170001');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '123e4567-e89b-12d3-a456-426614170002',
@@ -35,7 +35,7 @@ SELECT '123e4567-e89b-12d3-a456-426614170002',
        '221B Park Street, Kolkata',
        '1989-07-29',
        '2024-01-05'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170002');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170002');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '123e4567-e89b-12d3-a456-426614170003',
@@ -44,7 +44,7 @@ SELECT '123e4567-e89b-12d3-a456-426614170003',
        'Hitech City, Madhapur, Hyderabad',
        '1997-02-18',
        '2024-03-22'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170003');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170003');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '123e4567-e89b-12d3-a456-426614170004',
@@ -53,7 +53,7 @@ SELECT '123e4567-e89b-12d3-a456-426614170004',
        'Sector 62, Noida, Uttar Pradesh',
        '1984-09-14',
        '2023-11-09'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170004');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '123e4567-e89b-12d3-a456-426614170004');
 
 
 -- More Indian data
@@ -64,7 +64,7 @@ SELECT '223e4567-e89b-12d3-a456-426614170005',
        'FC Road, Shivaji Nagar, Pune',
        '1993-01-27',
        '2024-04-10'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170005');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170005');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '223e4567-e89b-12d3-a456-426614170006',
@@ -73,7 +73,7 @@ SELECT '223e4567-e89b-12d3-a456-426614170006',
        'C G Road, Navrangpura, Ahmedabad',
        '1990-06-08',
        '2023-10-12'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170006');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170006');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '223e4567-e89b-12d3-a456-426614170007',
@@ -82,7 +82,7 @@ SELECT '223e4567-e89b-12d3-a456-426614170007',
        'T Nagar, Chennai',
        '1987-03-16',
        '2024-02-28'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170007');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170007');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '223e4567-e89b-12d3-a456-426614170008',
@@ -91,7 +91,7 @@ SELECT '223e4567-e89b-12d3-a456-426614170008',
        'Rajajinagar, Bengaluru',
        '1996-12-02',
        '2023-09-05'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170008');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170008');
 
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '223e4567-e89b-12d3-a456-426614170009',
@@ -100,4 +100,4 @@ SELECT '223e4567-e89b-12d3-a456-426614170009',
        'Altamount Road, Mumbai',
        '1992-08-21',
        '2024-01-18'
-    WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170009');
+WHERE NOT EXISTS (SELECT 1 FROM patient WHERE id = '223e4567-e89b-12d3-a456-426614170009');
