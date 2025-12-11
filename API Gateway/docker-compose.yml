@@ -7,9 +7,3 @@ services:
     image: api-gateway:latest
     ports:
       - "4004:4004"
-    networks:
-      - internal
-
-networks:
-  internal:
-    external: true

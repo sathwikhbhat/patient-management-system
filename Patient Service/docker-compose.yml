@@ -16,8 +16,6 @@ services:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     depends_on:
       - patient-service-db
-    networks:
-      - internal
 
   patient-service-db:
     container_name: patient-service-db
@@ -30,13 +28,3 @@ services:
       - "5000:5432"
     volumes:
       - "postgres_data:/var/lib/postgresql"
-    networks:
-      - internal
-
-networks:
-  internal:
-    name: internal
-    driver: bridge
-
-volumes:
-  postgres_data:

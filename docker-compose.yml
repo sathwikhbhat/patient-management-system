@@ -1,3 +1,5 @@
+name: Patient Management System
+
 services:
   kafka:
     image: confluentinc/cp-kafka:latest
@@ -27,9 +29,47 @@ services:
     networks:
       - internal
 
+  # Other services
+  patient-service:
+    extends:
+      file: ./Patient Service/docker-compose.yml
+      service: patient-service
+    networks:
+      - internal
+
+  patient-service-db:
+    extends:
+      file: ./Patient Service/docker-compose.yml
+      service: patient-service-db
+    networks:
+      - internal
+
+  billing-service:
+    extends:
+      file: ./Billing Service/docker-compose.yml
+      service: billing-service
+    networks:
+      - internal
+
+  analytics-service:
+    extends:
+      file: ./Analytics Service/docker-compose.yml
+      service: analytics-service
+    networks:
+      - internal
+
+  api-gateway:
+    extends:
+      file: ./API Gateway/docker-compose.yml
+      service: api-gateway
+    networks:
+      - internal
+
 volumes:
   kafka_data:
+  postgres_data:
 
 networks:
   internal:
-    external: true
+    name: internal
+    driver: bridge
