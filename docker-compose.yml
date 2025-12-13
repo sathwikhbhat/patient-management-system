@@ -30,6 +30,20 @@ services:
       - internal
 
   # Other services
+  auth-service:
+    extends:
+      file: ./Auth Service/docker-compose.yml
+      service: auth-service
+    networks:
+      - internal
+
+  auth-service-db:
+    extends:
+      file: ./Auth Service/docker-compose.yml
+      service: auth-service-db
+    networks:
+      - internal
+
   patient-service:
     extends:
       file: ./Patient Service/docker-compose.yml
