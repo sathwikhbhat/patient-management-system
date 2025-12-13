@@ -27,4 +27,7 @@ services:
     ports:
       - "5001:5432"
     volumes:
-      - "postgres_data:/var/lib/postgresql"
+      - "auth_postgres_data:/var/lib/postgresql"
+
+volumes:
+  auth_postgres_data:

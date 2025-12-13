@@ -81,7 +81,8 @@ services:
 
 volumes:
   kafka_data:
-  postgres_data:
+  auth_postgres_data:
+  patient_postgres_data:
 
 networks:
   internal:

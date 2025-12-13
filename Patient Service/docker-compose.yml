@@ -28,4 +28,7 @@ services:
     ports:
       - "5000:5432"
     volumes:
-      - "postgres_data:/var/lib/postgresql"
+      - "patient_postgres_data:/var/lib/postgresql"
+
+volumes:
+  patient_postgres_data:
