@@ -14,6 +14,7 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: none
       SPRING_SQL_INIT_MODE: always
       SPRING_JPA_DEFER_DATASOURCE_INITIALIZATION: true
+      JWT_SECRET: this_is_a_jwt_secret_key_please_change_it_before_deploying
     depends_on:
       - auth-service-db
 
