@@ -1,9 +1,11 @@
 services:
   api-gateway:
-    container_name: api-gateway
     build:
       context: .
       dockerfile: Dockerfile
     image: api-gateway:latest
+    container_name: api-gateway
+    environment:
+      AUTH_SERVICE_URL: http://auth-service:4005
     ports:
       - "4004:4004"
