@@ -1,5 +1,5 @@
 ### POST request to retrieve JWT token
-POST http://localhost:4005/login
+POST http://localhost:4004/auth/login
 Content-Type: application/json
 
 {
@@ -7,5 +7,8 @@ Content-Type: application/json
   "password": "password123"
 }
 
-> {%  client.global.set("token", response.body.token) %}
+> {%
+    client.global.set("token", response.body.token)
+%}
+
 ###
