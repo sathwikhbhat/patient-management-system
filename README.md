@@ -3,6 +3,10 @@
 A microservices-based patient management system built with Spring Boot. This is a personal project to learn and
 demonstrate how different services can communicate using REST APIs, gRPC, and Kafka in a distributed system
 
+<p align="center">
+  <img src="./assets/architecture-workflow.png" alt="Architecture Workflow" width="650"/>
+</p>
+
 ## What This Project Does
 
 This system allows you to manage patient records through a set of microservices. When you create a patient, the system
