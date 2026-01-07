@@ -199,3 +199,7 @@ This creates the patient, triggers a gRPC call to Billing Service, and publishes
 unique across all patients
 
 More sample requests are available in the [api-requests](./api-requests) and [grpc-requests](./grpc-requests) folders
+
+## Acknowledgments
+
+Special thanks to [@chrisblakely01](https://github.com/chrisblakely01/) for inspiration and guidance
